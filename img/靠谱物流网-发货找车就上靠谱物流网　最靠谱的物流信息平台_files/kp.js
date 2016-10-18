@@ -4,20 +4,9 @@
  */
 //search js
 (function () {
-    $('.kp-search-address').mousedown(function () {
-        setTimeout(function () {
-            $('.kp-search-address').addClass('kp-search-address-active');
-        },1)
-
-    });
-    $('.chose-road div').click(function () {
+    $('#start').focus(function () {
         $('.kp-search-address').addClass('kp-search-address-active');
-        $('.chose-road div').removeClass('active');
-        $(this).addClass('active');
-    });
-    $('body').mousedown(function () {
-        $('.kp-search-address').removeClass('kp-search-address-active');
-    });
+    })
 })();
 //hover js
 (function () {
@@ -47,15 +36,5 @@
     });
     $('.kp-road-car .car-list').mouseleave(function () {
         $(this).removeClass('hover-car');
-    })
-})();
-
-//detail
-(function () {
-    $('.news-list-detail-head div').click(function () {
-        $('.news-list-detail-head div').removeClass('detail-head-active');
-        $(this).addClass('detail-head-active');
-        $('.news-list-detail-body .news').css('display','none');
-        $('.news-list-detail-body .news').eq($('.news-list-detail-head div').index(this)).css('display','block')
     })
 })();
