@@ -4,11 +4,9 @@
  */
 //search js
 (function () {
-    $('.kp-search-address').mousedown(function () {
-        setTimeout(function () {
-            $('.kp-search-address').addClass('kp-search-address-active');
-        },1)
-
+    $('.kp-search-address').mousedown(function (e) {
+        $('.kp-search-address').addClass('kp-search-address-active');
+        e.stopPropagation();
     });
     $('.chose-road div').click(function () {
         $('.kp-search-address').addClass('kp-search-address-active');
